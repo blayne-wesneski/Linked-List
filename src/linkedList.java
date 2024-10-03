@@ -132,6 +132,11 @@ public class linkedList implements listI {
             return null;
         }
 
+        // List of 1
+        if (head.next == null) {
+            return removeFirst();
+        }
+
         node curr = head, prev = null;
 
         while (curr.next != null) {
@@ -145,7 +150,7 @@ public class linkedList implements listI {
 
         size--;
 
-        //after method returns, last node gets garbage collected
+        // after method returns, last node gets garbage collected
         return curr.data;
     }
 
@@ -167,5 +172,19 @@ public class linkedList implements listI {
         }
 
         return false;
+    }
+
+    public String get(int idx) {
+        if (head == null)
+            return null;
+
+        if (size - 1 < idx)
+            return null;
+
+        node tmp = head;
+        for (int i = 0; i < idx; i++)
+            tmp = tmp.next;
+
+        return tmp.data;
     }
 }

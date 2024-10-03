@@ -1,5 +1,3 @@
-package Activity3;
-
 /**
  * Basic interface for a Linked List implementation.
  */

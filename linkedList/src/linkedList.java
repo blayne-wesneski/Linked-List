@@ -1,5 +1,3 @@
-package Activity3;
-
 public class linkedList implements listI {
 
     /**
